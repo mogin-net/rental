@@ -1,35 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Webpage Template Title</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css"/>
-    <noscript>
-      <link rel="stylesheet" href="/css/noscript.css"/>
-    </noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Navigation -->
-      <nav id="nav"><a class="icon solid fa-home" href="#"><span>Home</span></a></nav>
-      <!-- Main Content -->
-      <div id="main">
-        <h1>Content</h1>
-      </div>
-      <!-- Footer -->
-      <div id="footer">
-        <ul class="copyright"> 
-          <li id="copyright">&copy; 2021 - 2023</li>
-        </ul>
-      </div>
+    <script src="/js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Grand Bali Luxe Tours</title>
+</head>
+<body>
+    <!--Container for Page-->
+    <div class="page-container">
+        <!--Navigation Tabs-->
+        <nav class="intro">
+            <ul>
+                <li data-tab-target="#home" class="active">HOME</li>
+                <li data-tab-target="#packages">PACKAGES</li>
+                <li data-tab-target="#gallery">GALLERY</li>
+                <li data-tab-target="#about">ABOUT</li>
+            </ul>
+        </nav>
+        <!--Contents to be Navigated-->
+        <div class="tab-content">
+            <!--Home-->
+            <div id="home" data-tab-content class="active fade-in visible">
+                <div class="brand-logo visible">
+                    <img src="/img/logo.svg" alt="Logo">
+                </div>
+                <h1 class="visible">Grand Bali Luxe Tours</h1>
+                <p id="trademark" class="intro">by <a href="https://mogin.net/" target="_blank" rel="noopener noreferrer">Mogin Group</a></p>
+                <p>Address : Denpasar, Bali</p>
+            </div>
+            <!--Packages-->
+            <div id="packages" data-tab-content class="fade-in">    
+                <ul>
+                    <li><a href="/pdf/Healing Luxe.pdf">Healing Luxe</a></li>
+                    <li><a href="/pdf/Honey Moon Luxe.pdf">Honey Moon Luxe</a></li>
+                    <li><a href="/pdf/Penida Luxe.pdf">Penida Luxe</a></li>
+                    <li><a href="/pdf/Wedding Luxe.pdf">Wedding Luxe</a></li>
+                </ul>
+            </div>
+            <!--Gallery-->
+            <div id="gallery" data-tab-content class="fade-in">
+                <div class="bg-shadow video-container">
+                    <video src="/video/gallery-video.mp4" controls autoplay></video>
+                </div>
+            </div>
+            <!--About-->
+            <div id="about" data-tab-content class="fade-in">
+                <h1>Meet our team.</h1>
+                <div class="profile">
+                    <img src="/img/profile-1.jpg" alt="Profile picture" class="profile-picture bg-shadow">
+                    <div class="profile-detail">
+                        <h2>John Doe</h2>
+                        <ul class="profile-skills">
+                            <li>Web development</li>
+                            <li>UI/UX design</li>
+                            <li>Project management</li>
+                        </ul>    
+                    </div>
+                </div>
+                <div class="profile right">
+                    <img src="/img/profile-2.jpg" alt="Profile picture" class="profile-picture bg-shadow">
+                    <div class="profile-detail">
+                        <h2>Bob Johnson</h2>
+                        <ul class="profile-skills">
+                            <li>Graphic design</li>
+                            <li>Illustration</li>
+                            <li>Branding</li>
+                        </ul>    
+                    </div>
+                </div>
+                <div class="profile bottom">
+                    <img src="/img/profile-3.jpg" alt="Profile picture" class="profile-picture bg-shadow">
+                    <div class="profile-detail">
+                        <h2>Jane Smith</h2>
+                        <ul class="profile-skills">
+                            <li>Software development</li>
+                            <li>Data analysis</li>
+                            <li>Machine learning</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+            <!--Decoration-->
+            <div class="decoration top-left pulse">
+                <img src="/img/flower-icon.svg" alt="Flower Icon">
+            </div>
+            <div class="decoration bottom-right pulse">
+                <img src="/img/flower-icon.svg" alt="Flower Icon">
+            </div>
+        </div>
+        <footer class="intro">
+            <p>© 2023 Grand Bali Luxe Tours</p>
+        </footer>
     </div>
-    <!-- Scripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/browser.min.js"></script>
-    <script src="/js/breakpoints.min.js"></script>
-    <script src="/js/util.js"></script>
-    <script src="/js/main.js"></script>
-  </body>
+</body>
 </html>
