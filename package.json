@@ -1,0 +1,13 @@
+{
+  "name": "template",
+  "scripts": {
+    "static": "cp -r ./src/img ./docs && cp -r ./src/js ./docs && cp -r ./src/webfonts ./docs",
+    "sass": "sass ./src/sass:./docs/css --no-source-map",
+    "pug": "pug ./src -b ./templates -o ./docs -P",
+    "dev:sass": "yarn run sass --watch",
+    "dev:pug": "yarn run pug -w",
+    "clean": "rm -rf ./docs/!(CNAME)",
+    "build": "yarn run clean && yarn run static && yarn run sass && yarn run pug -s"
+  },
+  "packageManager": "yarn@3.5.1"
+}

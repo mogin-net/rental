@@ -1,0 +1,26 @@
+{
+  "name": "Template",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "zsh": {
+        "path": "/bin/zsh"
+      }
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.formatOnSave": true,
+    "material-icon-theme.folders.associations": {
+      "webfonts": "font",
+      "docs": "views"
+    },
+    "liveServer.settings.root": "/docs",
+    "liveServer.settings.CustomBrowser": "chrome"
+  },
+  "extensions": [
+    "ducfilan.pug-formatter",
+    "pkief.material-icon-theme",
+    "ritwickdey.liveserver"
+  ]
+}

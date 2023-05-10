@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    block title
+    - var headerTitle = title ? `Webpage Template Title :: ${title}` : "Webpage Template Title"
+    title #{headerTitle}
+    meta(charset="utf-8")/
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")/
+    link(rel="stylesheet" href="/css/main.css")/
+    noscript: link(rel="stylesheet" href="/css/noscript.css")/
+  body.is-preload
+    // Wrapper 
+    #wrapper
+      // Navigation 
+      nav#nav
+        a(href="#").icon.solid.fa-home: span Home
+
+      // Main Content 
+      #main
+        block content
+
+      // Footer 
+      #footer
+        ul.copyright 
+          li#copyright &copy; 2021 - #{new Date().getFullYear()}
+    include ./scripts.pug

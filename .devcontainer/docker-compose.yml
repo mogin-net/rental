@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web-template
+    restart: unless-stopped
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
