@@ -1,5 +1,5 @@
 {
-  "name": "Template",
+  "name": "Grand Bali Luxe",
   "dockerComposeFile": "docker-compose.yml",
   "service": "web",
   "workspaceFolder": "/workspace",

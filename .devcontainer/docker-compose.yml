@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: web-template
+    container_name: grand-bali-luxe
     restart: unless-stopped
     volumes:
       - ..:/workspace:cached
