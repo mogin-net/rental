@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: grand-bali-luxe
+    container_name: mogin-rental
     restart: unless-stopped
     volumes:
       - ..:/workspace:cached
