@@ -1,26 +1,109 @@
+include /links.pug
+- var company = "Christy Autos"
+- var title = ""
+- var ogBaseUrl = "http://localhost:5500"
+- var ogUrl = ""
+- var ogTitle = "Christy Autos"
+- var ogDescription = "Experience Luxury on Wheels with us!"
+- var ogImage = "/img/banner_1200_630.jpg"
+- var ogColor = "#33cdcd"
+- var dataA ="62" 
+- var dataB = "813"
+- var dataC = "3793"
+- var dataD = "9399"
+
+block header 
+  - var page = "home"
+
 doctype html
 html(lang="en")
   head
-    block title
-    - var headerTitle = title ? `Webpage Template Title :: ${title}` : "Webpage Template Title"
-    title #{headerTitle}
+    title #{title ? `${company} :: ${title}` : company}
     meta(charset="utf-8")/
     meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")/
+    include /meta.pug
     link(rel="stylesheet" href="/css/main.css")/
-    noscript: link(rel="stylesheet" href="/css/noscript.css")/
-  body.is-preload
+  body.is-preload.homepage
     // Wrapper 
-    #wrapper
-      // Navigation 
-      nav#nav
-        a(href="#").icon.solid.fa-home: span Home
+    #page-wrapper
+
+      // Header
+      #header-wrapper 
+        header#header.container
+
+          // Logo
+          #logo
+            .logo
+              include /logo3.pug
+            .logo-name
+              div.company=company
+              div.brand by Mogin Group
+
+          // Navigation 
+          nav#nav
+            ul 
+              each nav, key in navs 
+                if key == page
+                  li.current
+                    a(href=`${nav.href}`)=nav.title
+                else 
+                  li
+                    a(href=`${nav.href}`)=nav.title
 
       // Main Content 
-      #main
-        block content
+      block content
 
-      // Footer 
-      #footer
-        ul.copyright 
-          li#copyright &copy; 2021 - #{new Date().getFullYear()}
+      // Footer
+      #footer-wrapper
+        #footer.container
+          .row
+            .col-4.col-6-medium.col-12-small
+              // Links
+              section.widget.links.box.footer(style="height: 100%;")
+                h3 Important links
+                ul.style2
+                  each link in important
+                    li
+                      a(href=link[1])=link[0]
+            .col-4.col-6-medium.col-12-small
+              // Links
+              section.widget.links.box.footer(style="height: 100%;")
+                h3 Discover Bali
+                ul.style2
+                  each link in discover
+                    li
+                      a(href=link[1])=link[0]
+            .col-4.col-12-medium.col-12-small
+              section.widget.contact.box.footer.last(style="height: 100%;")
+                h3 Contact Us
+                ul
+                  li
+                    a(href="#").icon.brands.fa-instagram
+                      span.label Instagram
+                  li
+                    a.icon.brands.fa-whatsapp(href="#" data-a=dataA data-b=dataB data-c=dataC data-d=dataD onclick="window.location.href = 'https://wa.me/' + this.dataset.a + this.dataset.b + this.dataset.c + this.dataset.d; return false;")
+                      span.label WhatsApp
+                h4 Address 
+                p
+                  | Christy Autos 
+                  br
+                  | Jl. Mertasari Gang Bambu II No 9
+                  br
+                  | Denpasar, Bali - Indonesia
+                h4 Contact Person 
+                p.position
+                  | Putu Budi 
+                  br
+                  span Sales Associate
+                h4 Phone
+                include /phone.pug
+                h4 Email
+                include /email.pug
+          .row 
+            .col-12
+              #copyright
+                ul.menu
+                  li &copy; #{new Date().getFullYear() > 2023 ? `2023 - ${new Date().getFullYear()}` : "2023"} #{company}
+                  li 
+                    a(href="/terms.html") Terms & Conditions
     include ./scripts.pug

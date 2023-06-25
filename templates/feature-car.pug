@@ -1,0 +1,27 @@
+section.box.feature.product
+  .image.featured
+    img(src=banner alt=altBanner)
+  .inner 
+    .container 
+      .row.gtr-50
+        .col-3.col-4-medium.col-12-small
+          .product-image
+            img(src=image alt=name) 
+        .col-6.col-8-medium.col-12-small
+          .container
+            .row.gtr-50.product-conditions
+              .col-12
+                include /conditions
+              .col-12
+                .price=`${price ? price : "Upon Request"}`
+        .col-3.col-4-medium.col-12-small.right
+          a.button.small.icon.solid.brands.fa-whatsapp(href="#" data-a=dataA data-b=dataB data-c=dataC data-d=dataD onclick=`window.location.href = 'https://wa.me/' + this.dataset.a + this.dataset.b + this.dataset.c + this.dataset.d + '?text=${message}'; return false;`) Contact us
+        .col-12
+          .right
+            include /terms
+        .col-12
+          hr
+        .col-12
+          h2=altBanner
+          each txt in text
+            p=txt

@@ -1,0 +1,26 @@
+extends /layout.pug
+block header
+  - title = "Rental"
+  - page = "rental"
+  - ogTitle = myOgTitle
+  - ogUrl = myOgUrl
+  - ogDescription = myOgDescription
+  - ogImage = myOgImage
+block content
+  #features-wrapper
+    .container 
+      .row 
+        .col-12 
+          h1.title.main Our Rental Collections
+      .row 
+        each car in overview
+          .col-4.col-12-medium
+            - var link=car.link
+            - var image=car.image 
+            - var name=car.name
+            - var withDriver=car.withDriver
+            - var withDrinks=car.withDrinks
+            - var duration=car.duration
+            - var price=car.price
+            - var message=car.message
+            include /feature-rental

@@ -1,0 +1,17 @@
+extends /layout.pug
+block header
+  - title = myTitle
+  - page = "rental"
+  - ogTitle = myOgTitle
+  - ogUrl = myOgUrl
+  - ogDescription = myOgDescription
+  - ogImage = myOgImage
+block content
+  #features-wrapper
+    .container 
+      .row 
+        .col-12 
+          h1.title.main=title
+      .row 
+        .col-12
+          include /feature-car

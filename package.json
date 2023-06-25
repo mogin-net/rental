@@ -1,13 +1,18 @@
 {
   "name": "template",
   "scripts": {
-    "static": "cp -r ./src/img ./docs && cp -r ./src/js ./docs",
+    "static": "cp -r ./src/img ./docs && cp -r ./src/js ./docs && cp -r ./src/webfonts ./docs",
     "sass": "sass ./src/sass:./docs/css --no-source-map",
+    "cars": "node ./src/index.js",
     "pug": "pug ./src -b ./templates -o ./docs -P",
     "dev:sass": "yarn run sass --watch",
     "dev:pug": "yarn run pug -w",
     "clean": "rm -rf ./docs/!(CNAME)",
-    "build": "yarn run clean && yarn run static && yarn run sass && yarn run pug -s"
+    "build": "yarn run clean && yarn run static && yarn run sass && yarn run cars && yarn run pug -s"
   },
-  "packageManager": "yarn@3.5.1"
+  "packageManager": "yarn@3.5.1",
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "sharp": "^0.32.1"
+  }
 }

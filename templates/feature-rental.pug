@@ -1,0 +1,16 @@
+section.box.feature.rental
+  .image.featured.product.more
+    img(src=image alt=name)
+    a(href=link) Learn more
+  .inner
+    .container 
+      .row.gtr-50 
+        .col-12  
+          h2=name
+        .col-12
+          include /conditions
+        .col-12.right
+          .price
+            a(href="#" data-a=dataA data-b=dataB data-c=dataC data-d=dataD onclick=`window.location.href = 'https://wa.me/' + this.dataset.a + this.dataset.b + this.dataset.c + this.dataset.d + '?text=${message}'; return false;`)=`${price ? price : "Upon Request"}`
+        .col-12.right
+          include /terms

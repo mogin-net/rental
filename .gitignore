@@ -1,6 +1,9 @@
 # OSX hidden files
 .DS_Store
 
+docs/design.html
+docs/test.html
+
 .yarn/*
 !.yarn/cache
 !.yarn/patches
