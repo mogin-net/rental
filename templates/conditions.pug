@@ -1,0 +1,14 @@
+.conditions
+  ul
+    li.tooltip
+      .tooltiptext=withDriver ? "Driver" : "No Driver"
+      .icon.solid.fa-user(class=withDriver ? "active" : "")
+    li.tooltip 
+      .tooltiptext=withDrinks ? "Drinks" : "No Drinks"
+      .icon.solid.fa-glass-whiskey(class=withDrinks ? "active" : "")
+    li.tooltip
+      .tooltiptext=`${duration} hours`
+      .icon.solid.fa-clock(class=duration > 10 ? "active" : "")
+    li.tooltip 
+      .tooltiptext Insurance 
+      .icon.solid.fa-car-crash.active

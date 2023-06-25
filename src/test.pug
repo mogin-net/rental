@@ -1,0 +1,30 @@
+extends /layout.pug
+block header
+  - page = "rental"
+block content
+  #features-wrapper
+    .container 
+      .row 
+        - var link="/rental/toyota-alphard.html"
+        - var image="/img/rental/alphard.png"
+        - var name="Toyota Alphard"
+        - var withDriver=true
+        - var withDrinks=false
+        - var duration=12
+        - var price="2.900K"
+        - var banner="/img/community.jpg"
+        - var altBanner="Community travel in Bali"
+        - 
+          var text=[
+            "Embark on a Bali adventure like no other in the Mitsubishi Xpander, your ideal companion for experiencing the enchanting landscapes and vibrant culture this island paradise offers. Crafted with an optimal blend of style and functionality, the Xpander provides a comfortable retreat for explorers, while its powerful performance and exceptional fuel efficiency ensure smooth travels, be it on winding mountain roads, through charming village streets, or alongside the sun-kissed coastlines. The vehicle is replete with modern comforts and advanced safety features, promising both a secure and enjoyable adventure. What’s more, each rental includes a professional driver well-versed with the region’s routes, freeing you to fully immerse in Bali's captivating scenery and rich culture. Set off on an unforgettable journey with the Mitsubishi Xpander and create lifetime memories amidst Bali's exotic allure. The journey towards your dream Balinese adventure starts here!",
+            "Embark on a Bali adventure like no other in the Mitsubishi Xpander, your ideal companion for experiencing the enchanting landscapes and vibrant culture this island paradise offers. Crafted with an optimal blend of style and functionality, the Xpander provides a comfortable retreat for explorers, while its powerful performance and exceptional fuel efficiency ensure smooth travels, be it on winding mountain roads, through charming village streets, or alongside the sun-kissed coastlines. The vehicle is replete with modern comforts and advanced safety features, promising both a secure and enjoyable adventure. What’s more, each rental includes a professional driver well-versed with the region’s routes, freeing you to fully immerse in Bali's captivating scenery and rich culture. Set off on an unforgettable journey with the Mitsubishi Xpander and create lifetime memories amidst Bali's exotic allure. The journey towards your dream Balinese adventure starts here!"
+          ]
+        .col-4.col-12-medium
+          include /feature-rental
+        .col-4.col-12-medium
+          - var image="/img/rental/nmax.png"
+          include /feature-rental
+        .col-4.col-12-medium
+          include /feature-sell
+        .col-12
+          include /feature-car

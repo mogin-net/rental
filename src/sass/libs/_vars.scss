@@ -1,0 +1,35 @@
+// Misc.
+	$misc: (
+		z-index-base:	10000
+	);
+
+// Duration.
+	$duration: (
+		navPanel: 0.5s
+	);
+
+// Size.
+	$size: (
+		navPanel: 275px
+	);
+
+// Font.
+	$font: (
+    logo: ("Oswald", sans-serif),
+    default: ("Montserrat", sans-serif),
+	);
+
+// Palette.
+	$palette: (
+    background:           #FEFDFC, // FAF0E6
+    primary:              #33cdcd, // (Bright Cyan/Turquoise)
+    secondary:            #324B8A,
+    accent:               #A93800,
+    logo:                 #003135,
+    background-text:      #003135,
+    primary-text:         #000000,
+    secondary-text:       #000000,
+    dark:                 #000000,
+    light:                #ffffff,
+    icon:                 #FF0000,
+	);
