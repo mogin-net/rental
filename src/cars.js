@@ -47,7 +47,7 @@ module.exports = [
     name: "Kawasaki KLX150",
     travel: "motorbike",
     image: "kawasaki.png",
-    withDriver: true,
+    withDriver: false,
     withDrinks: false,
     duration: 10,
     seo: "abc",
