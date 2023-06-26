@@ -54,7 +54,7 @@ module.exports = [
     text: [
       "Experience the exhilarating freedom of traversing Bali on a Kawasaki KLX150, a lightweight dual-sport motorcycle designed for adventure seekers. Its nimble handling and impressive power make it the perfect choice for exploring Bali's diverse landscapes, whether it's a ride through the vibrant local markets of Ubud, a journey along the picturesque coastal roads of Seminyak, or an adventurous off-road trip in the more secluded parts of the island. Bali offers a wide array of experiences to KLX150 riders, from visiting ancient temples tucked away in lush forests, to viewing awe-inspiring sunsets at cliff-side vantage points, and engaging in thrilling water sports at world-renowned beaches. With the Kawasaki KLX150, you have the freedom to tailor your Bali experience to your liking. It's not just about reaching your destination; it's about the thrilling journey and the unforgettable moments along the way. So, hop on a Kawasaki KLX150 and let Bali's enchanting charm unfold before your eyes, one ride at a time."
     ],
-    notForRent: false,
+    notForRent: true,
   },
   {
     name: "Yamaha NMax",

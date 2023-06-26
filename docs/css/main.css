@@ -1678,6 +1678,9 @@ ul.menu li:first-child {
 .widget.links {
   color: #A93800;
 }
+.widget.footer.links {
+  color: #832b00;
+}
 .widget.thumbnails .grid {
   margin: 0 0 3em 0;
 }
