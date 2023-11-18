@@ -120,5 +120,18 @@ async function asyncHandler() {
     });
     fs.writeFileSync(path.join(rentalDir, rentalCar.link), html3);
   }
+  for (const sellingCar of selling) {
+    const { travel, name, originalImage, ogBanner } = sellingCar;
+    const source = path.join(imageSourceDir, originalImage);
+    if(fs.existsSync(source)) {
+      const name = path.parse(originalImage).name;
+      const target = path.join(imageTargetDir, originalImage);
+      if(!fs.existsSync(target)) {
+        fs.copyFileSync(source, target);
+      }
+    } else {
+      console.log(`Image missing for ${name}`);
+    }
+  }
 }
 void asyncHandler();
